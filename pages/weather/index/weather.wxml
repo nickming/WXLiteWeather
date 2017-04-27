@@ -1,4 +1,5 @@
 <view class="container">
+  <image src="{{backgroudUrl}}" mode="scaleToFill"></image>
   <view class="header">
     <view class="header-top">
       <view id="city">{{weather.city}}</view>
@@ -40,13 +41,13 @@
     </view>
   </view>
   <view class="life-suggestion">
-      <text>空气指数:{{weather.suggestion.air.brf}},{{weather.suggestion.air.txt}}</text>
+    <text>空气指数:{{weather.suggestion.air.brf}},{{weather.suggestion.air.txt}}</text>
     <text>舒适度指数:{{weather.suggestion.comf.brf}},{{weather.suggestion.comf.txt}}</text>
     <text>洗车指数:{{weather.suggestion.cw.brf}},{{weather.suggestion.cw.txt}}</text>
     <text>穿衣指数:{{weather.suggestion.drsg.brf}},{{weather.suggestion.drsg.txt}}</text>
     <text>感冒指数:{{weather.suggestion.flu.brf}},{{weather.suggestion.flu.txt}}</text>
     <text>运动指数:{{weather.suggestion.sport.brf}},{{weather.suggestion.sport.txt}}</text>
     <text>旅游指数:{{weather.suggestion.trav.brf}},{{weather.suggestion.trav.txt}}</text>
-        <text>紫外线指数:{{weather.suggestion.uv.brf}},{{weather.suggestion.uv.txt}}</text>
+    <text>紫外线指数:{{weather.suggestion.uv.brf}},{{weather.suggestion.uv.txt}}</text>
   </view>
 </view>

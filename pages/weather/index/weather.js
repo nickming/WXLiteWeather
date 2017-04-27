@@ -1,4 +1,5 @@
 const weatherUtil = require('../../../utils/weatherUtil.js');
+const imageUtil=require('../../../utils/imageUtil.js');
 var app = getApp();
 
 function refreshData(that) {
@@ -13,7 +14,8 @@ function refreshData(that) {
 Page({
   data: {
     title: 'Lite天气',
-    weather: {}
+    weather: {},
+    backgroudUrl:''
   },
 
   bindViewTap: function () {
@@ -21,7 +23,13 @@ Page({
   },
 
   onLoad: function () {
-    refreshData(this);
+    var that=this;
+    imageUtil.requestDailyImageUrl((url)=>{
+        that.setData({
+          backgroudUrl:url
+        });
+    });
+    refreshData(that);
   },
 
   onPullDownRefresh: function () {
