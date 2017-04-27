@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/weather/index/weather",
+    "pages/weather/city/city",
+    "pages/weather/detail/detail",
+    "pages/weather/setting/setting",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#09bb07",
+    "navigationBarTitleText": "Lite天气",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/weather/index/weather",
+        "text": "天气",
+        "iconPath": "/resources/weather_icon_normal.png",
+        "selectedIconPath": "/resources/weather_icon_selected.png"
+      },
+      {
+        "pagePath": "pages/weather/setting/setting",
+        "text": "我的",
+        "iconPath": "/resources/setting_icon_normal.png",
+        "selectedIconPath": "/resources/setting_icon_selected.png"
+      }
+    ],
+    "color": "#dbdbdb",
+    "selectedColor": "#09bb07",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 5000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}

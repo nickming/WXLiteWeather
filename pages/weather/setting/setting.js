@@ -1,0 +1,5 @@
+var appInstance=getApp();
+
+Page({
+    
+})

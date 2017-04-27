@@ -1,0 +1,3 @@
+<view wx:for="{{cities}}" bindtap="showLog">
+  {{index}}: {{item.name}}
+</view>

@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="header">
+    <view class="header-top">
+      <view id="city">{{weather.city}}</view>
+      <view>{{weather.update}}</view>
+    </view>
+    <view class="header-condition">
+      <view id="temp">{{weather.now.tmp}}℃</view>
+      <view>{{weather.now.cond.txt}}</view>
+    </view>
+  </view>
+  <view class="item-list" wx:for="{{weather.daily}}">
+    <view class="daily-item">
+      <view class="item-date">{{item.date}}</view>
+      <view class="item-date">{{item.cond.txt_d}}</view>
+      <view class="item-date">{{item.tmp.max}}</view>
+      <view class="item-date">{{item.tmp.min}}</view>
+    </view>
+  </view>
+  <view class="air-list">
+    <view class="air-item">
+      <view>{{weather.aqi.qlty}}</view>
+      <view>空气质量</view>
+    </view>
+    <view class="air-item">
+      <view>{{weather.aqi.aqi}}</view>
+      <view>AQI</view>
+    </view>
+    <view class="air-item">
+      <view>{{weather.aqi.pm25}}</view>
+      <view>PM2.5</view>
+    </view>
+    <view class="air-item">
+      <view>{{weather.aqi.pm10}}</view>
+      <view>PM10</view>
+    </view>
+    <view class="air-item">
+      <view>{{weather.now.hum}}%</view>
+      <view>湿度</view>
+    </view>
+  </view>
+  <view class="life-suggestion">
+      <text>空气指数:{{weather.suggestion.air.brf}},{{weather.suggestion.air.txt}}</text>
+    <text>舒适度指数:{{weather.suggestion.comf.brf}},{{weather.suggestion.comf.txt}}</text>
+    <text>洗车指数:{{weather.suggestion.cw.brf}},{{weather.suggestion.cw.txt}}</text>
+    <text>穿衣指数:{{weather.suggestion.drsg.brf}},{{weather.suggestion.drsg.txt}}</text>
+    <text>感冒指数:{{weather.suggestion.flu.brf}},{{weather.suggestion.flu.txt}}</text>
+    <text>运动指数:{{weather.suggestion.sport.brf}},{{weather.suggestion.sport.txt}}</text>
+    <text>旅游指数:{{weather.suggestion.trav.brf}},{{weather.suggestion.trav.txt}}</text>
+        <text>紫外线指数:{{weather.suggestion.uv.brf}},{{weather.suggestion.uv.txt}}</text>
+  </view>
+</view>
